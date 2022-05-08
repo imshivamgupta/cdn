@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>VWO</h1>
+
+    <script>
+      const loadJS = () => {
+        let script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "/ui-worker.js";
+        script.defer = true;
+        document.body.appendChild(script);
+
+        script.addEventListener("load", (event) => {
+          const detectIntent = JSON.parse(getCookie("exit-intent"));
+          console.log(detectIntent, "ss");
+          if (!detectIntent) {
+            setCookie("exit-intent", false, 7);
+            showPopup();
+          } else {
+            hidePopup();
+          }
+        });
+
+        script.addEventListener("error", (error) => {
+          console.log("Error on loading file");
+        });
+      };
+
+      window.addEventListener("load", () => {
+        loadJS();
+      });
+    </script>
+  </body>
+</html>

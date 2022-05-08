@@ -1,0 +1,139 @@
+:root {
+  --widget-bg: #fdd503;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600&display=swap");
+
+#uniqueID.popup {
+  box-sizing: border-box;
+  position: relative;
+  /* top: 50%; */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  width: 80%;
+  background-color: var(--widget-bg);
+  padding: 3rem 4rem;
+}
+
+#uniqueID.popup.hide {
+  display: none;
+}
+
+#uniqueID.popup .btn-close span svg {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#uniqueID.popup .content {
+  flex: 1 1 60%;
+}
+
+#uniqueID.popup .figure {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+#uniqueID.popup .figure img {
+  width: 100%;
+}
+
+#uniqueID.popup .content .heading-title {
+  /* font-family: "inherit"; */
+}
+
+#uniqueID.popup .content .heading-title h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+#uniqueID.popup .content .heading-title h1:nth-child(2) {
+  font-weight: 300;
+}
+
+#uniqueID.popup .content form {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 2rem;
+}
+
+#uniqueID.popup .content form input {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+
+#uniqueID.popup .content form p.error {
+  display: none;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 1rem;
+  color: tomato;
+}
+
+#uniqueID.popup .content form p.error.show {
+  display: block;
+}
+
+#uniqueID.popup .content form input.error {
+  outline: 2px solid tomato;
+}
+#uniqueID.popup .content form input:nth-child(2) {
+  margin-top: 1rem;
+}
+
+#uniqueID.popup .content form label {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+#uniqueID.popup .content form .btn-submit {
+  margin-block: 1rem;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#uniqueID.popup .content a {
+  display: block;
+  text-align: center;
+  color: #000;
+}
+
+@media only screen and (max-width: 576px) {
+  :root {
+    font-size: 14px;
+  }
+
+  #uniqueID.popup .btn-close span svg {
+    width: 30px;
+    height: 30px;
+  }
+  #uniqueID.popup {
+    width: 100%;
+    padding: 1rem;
+  }
+  #uniqueID.popup .figure {
+    display: none;
+  }
+  #uniqueID.popup .content {
+    flex: 1 1 100%;
+    margin-top: 4rem;
+  }
+  #uniqueID.popup .content .heading-title h1 {
+    font-size: 1.4rem;
+  }
+}
