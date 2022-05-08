@@ -13,13 +13,13 @@
       const loadJS = () => {
         let script = document.createElement("script");
         script.type = "text/javascript";
-        script.src = "/ui-worker.js";
+        script.src =
+          "https://cdn.jsdelivr.net/gh/imshivamgupta/cdn/ui-worker.js";
         script.defer = true;
         document.body.appendChild(script);
 
         script.addEventListener("load", (event) => {
           const detectIntent = JSON.parse(getCookie("exit-intent"));
-          console.log(detectIntent, "ss");
           if (!detectIntent) {
             setCookie("exit-intent", false, 7);
             showPopup();

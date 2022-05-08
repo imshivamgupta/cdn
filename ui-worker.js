@@ -4,7 +4,10 @@ function loadCSS() {
   const stylesheet = document.createElement("link");
   stylesheet.setAttribute("rel", "stylesheet");
   stylesheet.setAttribute("type", "text/css");
-  stylesheet.setAttribute("href", "style.css");
+  stylesheet.setAttribute(
+    "href",
+    "https://cdn.jsdelivr.net/gh/imshivamgupta/cdn/style.css"
+  );
   document.head.appendChild(stylesheet);
 }
 
@@ -50,7 +53,7 @@ const ui = `
     <a href="#">Privacy Policy</a>
   </div>
   <div class="figure">
-    <img src="./img.png" alt="banner" />
+    <img src="https://cdn.jsdelivr.net/gh/imshivamgupta/cdn/img.png" alt="banner" />
   </div>
 </div>`;
 
