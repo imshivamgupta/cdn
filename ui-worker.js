@@ -6,7 +6,7 @@ function loadCSS() {
   stylesheet.setAttribute("type", "text/css");
   stylesheet.setAttribute(
     "href",
-    "https://cdn.jsdelivr.net/gh/imshivamgupta/cdn/style.css"
+    "https://cdn.jsdelivr.net/gh/imshivamgupta/cdn@1.0.1/style.css"
   );
   document.head.appendChild(stylesheet);
 }
